@@ -1,0 +1,152 @@
+::root { /*Variables*/
+  --background: #21222a;
+  --buttonColor: #120f17 ;
+  --buttonHoverColor: #c1c1c3 ;
+  --textColor: #dcd8d8;
+}
+
+* { /*General website style properties*/
+  background: #21222a;
+  color: #dcd8d8;
+  font-family: "Monasans Neon", monospace;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navContainer { /*Contains the entire navigation bar*/
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0rem calc((100vw - 1000px) / 3);
+  justify-content: space-between;
+  flex-basis: 500px;
+  align-items: center;
+}
+
+.navItems { /*Container for website hyperlinks in the nav bar*/
+  order: 2;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.internLink { /*Internal hyperlink container*/
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.internalLinkText {
+  font-weight: 100;
+}
+
+.logoDiv { /*Entire Logo*/
+  order: 1;
+}
+
+.logoText { /*Current temporary logo: silas lundquist*/
+  font-weight: 800;
+}
+
+.navlinks { /*Container for all external links*/
+  order: 3;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.linkIcon { /*Class for external site icons*/
+  height: 1.5rem;
+  width: auto;
+  background: transparent;
+  padding-right: 0.4rem;
+}
+
+.linkText { /*Names of the external website links*/
+  background: transparent;
+}
+
+.linkBox { /*Container for each link*/
+  padding: 10px;
+  background: #120f17;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.5rem;
+  margin: 0.15rem;
+}
+
+.linkBox:hover { /*Changes the background of .linkBox on hover*/
+  background: #c1c1c3;
+}
+
+.linkBox:hover .linkText { /*Changes the text color when hovering over .linkBox*/
+  color: #120f17;
+}
+
+.appContainer { /*Container for all app elements*/
+  padding: 0rem calc((100vw - 1000px) / 3);
+  margin: 0;
+}
+
+.appTitle { /*Titles for app sections*/
+  background: none;
+}
+
+.portfolioElements { /*Container for all project elements*/
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.portfolioElement { /*Container for each project element*/
+  background: #120f17;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.portfolioElement:hover { /*Changes the color of the project container when hover over it*/
+  background: #c1c1c3;
+}
+
+.portfolioElement:hover .portfolioElementTitle { /*Changes the title color when hovering over the element container*/
+  color: #120f17;
+}
+
+.portfolioElementTitle { /*title of all project names*/
+  background: transparent;
+}
+
+.portfolioElementImage { /*class to make all screenshot images look similar*/
+  height: 200px;
+  border-radius: 20px;
+}
+
+.footerInternalLinks { /*container for the links in the footer*/
+  display: flex;
+  flex-flow: row nowrap;
+  background: transparent;
+}
+
+.footer { /*entire footer container*/
+  padding: 0rem calc((100vw - 1000px) / 3);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #120f17;
+}
+
+.footerInternalLinksText { /*Actual text of the footer links*/
+  font-weight: 500;
+  padding-right: 4rem;
+  background: transparent;
+}
+
+.footerInternalLinksLinkContainer { /*a tags that contain h2 titles for the footer links*/
+  background: transparent;
+}
