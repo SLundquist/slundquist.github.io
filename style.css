@@ -1,13 +1,14 @@
-::root { /*Variables*/
-  --background: #21222a;
-  --buttonColor: #120f17 ;
-  --buttonHoverColor: #c1c1c3 ;
+:root { /*Variables*/
+  --mainBackground: #21222a;
+  --secondaryBackgroundColor: #120f17 ;
+  --buttonHoverColor: #a0a0a0 ;
   --textColor: #dcd8d8;
+  --textHoverColor: #120f17;
 }
 
 * { /*General website style properties*/
-  background: #21222a;
-  color: #dcd8d8;
+  background: var(--mainBackground);
+  color: var(--textColor);
   font-family: "Monasans Neon", monospace;
   font-weight: 500;
   text-decoration: none;
@@ -36,17 +37,27 @@
 
 .internalLinkText {
   font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
 
-.logoDiv { /*Entire Logo*/
+.logoBox { /*Entire Logo*/
   order: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.SLLogo {
+  height: 2rem;
+  margin-right: 1rem;
 }
 
 .logoText { /*Current temporary logo: silas lundquist*/
   font-weight: 800;
 }
 
-.navlinks { /*Container for all external links*/
+.navLinks { /*Container for all external links*/
   order: 3;
   display: flex;
   flex-flow: row nowrap;
@@ -66,7 +77,7 @@
 
 .linkBox { /*Container for each link*/
   padding: 10px;
-  background: #120f17;
+  background: var(--secondaryBackgroundColor);
   border-radius: 10px;
   display: flex;
   flex-flow: row nowrap;
@@ -77,11 +88,11 @@
 }
 
 .linkBox:hover { /*Changes the background of .linkBox on hover*/
-  background: #c1c1c3;
+  background: var(--buttonHoverColor);
 }
 
 .linkBox:hover .linkText { /*Changes the text color when hovering over .linkBox*/
-  color: #120f17;
+  color: var(--textHoverColor);
 }
 
 .appContainer { /*Container for all app elements*/
@@ -99,34 +110,37 @@
 }
 
 .portfolioElement { /*Container for each project element*/
-  background: #120f17;
-  padding: 2rem;
+  background: var(--secondaryBackgroundColor);
+  padding: 2.2rem;
   border-radius: 20px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .portfolioElement:hover { /*Changes the color of the project container when hover over it*/
-  background: #c1c1c3;
+  background: var(--buttonHoverColor);
 }
 
 .portfolioElement:hover .portfolioElementTitle { /*Changes the title color when hovering over the element container*/
-  color: #120f17;
+  color: var(--textHoverColor);
 }
 
 .portfolioElementTitle { /*title of all project names*/
   background: transparent;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 .portfolioElementImage { /*class to make all screenshot images look similar*/
   height: 200px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
-.footerInternalLinks { /*container for the links in the footer*/
+.footerInternalLinksContainer { /*container for the links in the footer*/
   display: flex;
   flex-flow: row nowrap;
   background: transparent;
@@ -139,6 +153,8 @@
   bottom: 0;
   width: 100%;
   background: #120f17;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .footerInternalLinksText { /*Actual text of the footer links*/
@@ -147,6 +163,25 @@
   background: transparent;
 }
 
-.footerInternalLinksLinkContainer { /*a tags that contain h2 titles for the footer links*/
+.footerInternalLink { /*a tags that contain h2 titles for the footer links*/
   background: transparent;
+}
+
+.footerExternalLinksContainer {
+  background: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerLinkIcon {
+  height: 1.5rem;
+  margin: 0.4rem;
+  background: transparent;
+}
+
+.footerExternalLinkBox {
+  background: transparent;
+  margin: 0.4rem;
 }
