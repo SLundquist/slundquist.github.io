@@ -1,2 +1,2 @@
-# silaslundquist_portfolio
+# slundquist.github.io
 My personal portfolio.
