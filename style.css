@@ -154,6 +154,7 @@
   display: flex;
   flex-flow: row nowrap;
   background: transparent;
+  gap: 4rem;
 }
 
 .footer { /*entire footer container*/
@@ -172,7 +173,7 @@
 
 .footerInternalLinksText { /*Actual text of the footer links*/
   font-weight: 500;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 0 1rem 0;
   background: transparent;
 }
 
