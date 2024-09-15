@@ -4,6 +4,7 @@
   --buttonHoverColor: #bbbbbb ;
   --textColor: #dcd8d8;
   --textHoverColor: #120f17;
+  --LRPadding: calc((100vw - 1000px) / 5); /*To replace: padding: 0rem calc((100vw - 1000px) / 3);*/
 }
 
 * { /*General website style properties*/
@@ -19,7 +20,7 @@
   flex-flow: row wrap;
   margin: 0;
   margin-bottom: 3rem;
-  padding: 0rem calc((100vw - 1000px) / 3);
+  padding: 0 var(--LRPadding) 0 var(--LRPadding) ;
   justify-content: space-between;
   flex-basis: 500px;
   align-items: center;
@@ -39,7 +40,13 @@
 .internalLinkText {
   font-weight: 100;
   margin: 0;
-  padding: 0;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-radius: 10px;
+}
+
+.internalLinkText:hover {
+  font-weight: bold;
+  background: var(--secondaryBackgroundColor);
 }
 
 .logoBox { /*Entire Logo*/
@@ -94,10 +101,11 @@
 
 .linkBox:hover .linkText { /*Changes the text color when hovering over .linkBox*/
   color: var(--textHoverColor);
+  font-weight: bold;
 }
 
 .appContainer { /*Container for all app elements*/
-  padding: 0rem calc((100vw - 1000px) / 3);
+  padding: 0 var(--LRPadding) 0 var(--LRPadding);
   margin: 0;
 }
 
@@ -128,6 +136,7 @@
 
 .portfolioElement:hover .portfolioElementTitle { /*Changes the title color when hovering over the element container*/
   color: var(--textHoverColor);
+  font-weight: bold;
 }
 
 .portfolioElementTitle { /*title of all project names*/
@@ -148,27 +157,34 @@
 }
 
 .footer { /*entire footer container*/
-  padding: 0rem calc((100vw - 1000px) / 3);
-  position: fixed;
+  padding: 0 var(--LRPadding) 0 var(--LRPadding);
+  right: 0;
   left: 0;
+  position: fixed;
   bottom: 0;
-  width: 100%;
+  max-width: 100vw;
   background: #120f17;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footerInternalLinksText { /*Actual text of the footer links*/
   font-weight: 500;
-  padding-right: 4rem;
+  padding: 1rem 2rem 1rem 2rem;
   background: transparent;
+}
+
+.footerInternalLinksText:hover { /*Activates when hovering over the internal link text in the footer*/
+  font-weight: bold;
 }
 
 .footerInternalLink { /*a tags that contain h2 titles for the footer links*/
   background: transparent;
 }
 
-.footerExternalLinksContainer {
+.footerExternalLinksContainer { /*Container for all external links in the footer*/
   background: transparent;
   display: flex;
   flex-flow: row nowrap;
@@ -176,18 +192,36 @@
   justify-content: center;
 }
 
-.footerLinkIcon {
+.footerLinkIcon { /*Class for all icons of links in the footer*/
   height: 1.5rem;
   margin: 0.4rem;
   background: transparent;
 }
 
-.footerExternalLinkBox {
+.footerExternalLinkBox { /*Box for each specific link icon*/
   background: transparent;
   margin: 0.4rem;
 }
 
-/*
+.footerCopyrightContainer { /*Contains the copyright elements in the footer*/
+  background: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerCopyrightLogo { /*SL logo for the copyright area*/
+  height: 1.5rem;
+  background: transparent;
+}
+
+.footerCopyrightText { /*Copyright Text*/
+  background: transparent;
+  padding-left: 5px;
+}
+
+/* Experimental Code
 @media screen and (max-width: 541) {
   
   .linkBox { 
