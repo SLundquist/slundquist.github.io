@@ -214,14 +214,20 @@ body {
 
 .footerLinkIcon { /*Class for all icons of links in the footer*/
   height: 1.5rem;
-  padding: 0.4rem;
   background: transparent;
 }
 
 .footerExternalLinkBox { /*Box for each specific link icon*/
   background: transparent;
   margin: 0rem;
+  padding: 0;
   border-radius: 10px;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerExternalLinkBox:hover {
@@ -247,6 +253,7 @@ body {
   font-weight: lighter;
   font-family: var(--specialFont);
   font-size: 0.85rem;
+  padding-top: 0.25rem;
 }
 
 /* Experimental Code
