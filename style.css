@@ -11,25 +11,31 @@
 }
 
 * { /*General website style properties*/
-  background: var(--mainBackground);
+  background: transparent;
   color: var(--textColor);
   font-family: var(--lightFont);
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: 100%;
+  background: var(--mainBackground);
 }
 
 .navContainer { /*Contains the entire navigation bar*/
   display: flex;
   flex-flow: row wrap;
-  margin: 0;
+  margin: 0 1rem 0 1rem;
   margin-bottom: 3rem;
-  padding: 0 var(--LRPadding) 0 var(--LRPadding) ;
+  padding: 1rem var(--LRPadding) 1rem var(--LRPadding) ;
   justify-content: space-between;
   flex-basis: 500px;
   align-items: center;
+  top: 0;
+  background: var(--secondaryBackgroundColor);
+  border-radius: 0 0 1rem 1rem;
 }
 
 .navItems { /*Container for website hyperlinks in the nav bar*/
@@ -93,8 +99,8 @@ body {
 }
 
 .linkBox { /*Container for each link*/
-  padding: 10px;
-  background: var(--secondaryBackgroundColor);
+  padding: 1rem;
+  background: var(--mainBackground);
   border-radius: 10px;
   display: flex;
   flex-flow: row nowrap;
@@ -120,6 +126,7 @@ body {
 
 .appTitle { /*Titles for app sections*/
   background: none;
+  padding: 1rem 0 2.5rem 0;
 }
 
 .portfolioElements { /*Container for all project elements*/
@@ -167,7 +174,7 @@ body {
 }
 
 .footer { /*entire footer container*/
-  padding: 0 var(--LRPadding) 0 var(--LRPadding);
+  padding: 1rem var(--LRPadding) 1rem var(--LRPadding);
   right: 0;
   left: 0;
   position: fixed;
@@ -178,6 +185,8 @@ body {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  margin: 0 1rem 0 1rem;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .footerInternalLinksText { /*Actual text of the footer links*/
@@ -198,7 +207,7 @@ body {
   background: transparent;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   gap: 0.2rem;
 }
