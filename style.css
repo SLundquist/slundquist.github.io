@@ -4,15 +4,21 @@
   --buttonHoverColor: #bbbbbb ;
   --textColor: #dcd8d8;
   --textHoverColor: #120f17;
-  --LRPadding: calc((100vw - 1000px) / 5); /*To replace: padding: 0rem calc((100vw - 1000px) / 3);*/
+  --LRPadding: calc((100vw - 1000px) / 5);
+  --lightFont: "Monaspace Neon Light", monospace;
+  --boldFont: "Monaspace Neon ExtraBold", monospace;
+  --specialFont: "Monaspace Krypton Light", monospace;
 }
 
 * { /*General website style properties*/
   background: var(--mainBackground);
   color: var(--textColor);
-  font-family: "Monasans Neon", monospace;
-  font-weight: 500;
+  font-family: var(--lightFont);
   text-decoration: none;
+}
+
+body {
+  font-size: 100%;
 }
 
 .navContainer { /*Contains the entire navigation bar*/
@@ -45,7 +51,7 @@
 }
 
 .internalLinkText:hover {
-  font-weight: bold;
+  font-family: var(--boldFont);
   background: var(--secondaryBackgroundColor);
 }
 
@@ -59,10 +65,13 @@
 .SLLogo {
   height: 2rem;
   margin-right: 1rem;
+  background: transparent;
 }
 
 .logoText { /*Current temporary logo: silas lundquist*/
-  font-weight: 800;
+  font-family: var(--boldFont);
+  padding-top: 0.4rem;
+  background: transparent;
 }
 
 .navLinks { /*Container for all external links*/
@@ -100,8 +109,8 @@
 }
 
 .linkBox:hover .linkText { /*Changes the text color when hovering over .linkBox*/
+  font-family: var(--boldFont);
   color: var(--textHoverColor);
-  font-weight: bold;
 }
 
 .appContainer { /*Container for all app elements*/
@@ -116,6 +125,7 @@
 .portfolioElements { /*Container for all project elements*/
   display: flex;
   flex-flow: row wrap;
+  gap: 2rem;
 }
 
 .portfolioElement { /*Container for each project element*/
@@ -126,8 +136,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
 }
 
 .portfolioElement:hover { /*Changes the color of the project container when hover over it*/
@@ -136,13 +144,14 @@
 
 .portfolioElement:hover .portfolioElementTitle { /*Changes the title color when hovering over the element container*/
   color: var(--textHoverColor);
-  font-weight: bold;
+  font-family: var(--boldFont);
 }
 
 .portfolioElementTitle { /*title of all project names*/
   background: transparent;
   margin-bottom: 1.5rem;
   margin-top: 0;
+  font-family: var(--lightFont);
 }
 
 .portfolioElementImage { /*class to make all screenshot images look similar*/
@@ -172,13 +181,13 @@
 }
 
 .footerInternalLinksText { /*Actual text of the footer links*/
-  font-weight: 500;
+  font-weight: 100;
   padding: 1rem 0 1rem 0;
   background: transparent;
 }
 
 .footerInternalLinksText:hover { /*Activates when hovering over the internal link text in the footer*/
-  font-weight: bold;
+  font-family: var(--boldFont);
 }
 
 .footerInternalLink { /*a tags that contain h2 titles for the footer links*/
@@ -191,17 +200,23 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  gap: 0.2rem;
 }
 
 .footerLinkIcon { /*Class for all icons of links in the footer*/
   height: 1.5rem;
-  margin: 0.4rem;
+  padding: 0.4rem;
   background: transparent;
 }
 
 .footerExternalLinkBox { /*Box for each specific link icon*/
   background: transparent;
-  margin: 0.4rem;
+  margin: 0rem;
+  border-radius: 10px;
+}
+
+.footerExternalLinkBox:hover {
+  background: var(--mainBackground);
 }
 
 .footerCopyrightContainer { /*Contains the copyright elements in the footer*/
@@ -220,6 +235,9 @@
 .footerCopyrightText { /*Copyright Text*/
   background: transparent;
   padding-left: 5px;
+  font-weight: lighter;
+  font-family: var(--specialFont);
+  font-size: 0.85rem;
 }
 
 /* Experimental Code
