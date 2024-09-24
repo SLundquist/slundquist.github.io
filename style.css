@@ -35,7 +35,7 @@ body {
   align-items: center;
   top: 0;
   background: var(--secondaryBackgroundColor);
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 2rem 2rem;
 }
 
 .navItems { /*Container for website hyperlinks in the nav bar*/
@@ -110,6 +110,18 @@ body {
   margin: 0.15rem;
 }
 
+#link1.linkBox:hover::after {
+  display: block;
+  position: absolute;
+  top: 5rem;
+  align-items: center;
+  content: attr(data-tooltip);
+  border: none;
+  border-radius: 1rem;
+  background: var(--textHoverColor);
+  padding: .25rem;
+}
+
 .linkBox:hover { /*Changes the background of .linkBox on hover*/
   background: var(--buttonHoverColor);
 }
@@ -117,6 +129,10 @@ body {
 .linkBox:hover .linkText { /*Changes the text color when hovering over .linkBox*/
   font-family: var(--boldFont);
   color: var(--textHoverColor);
+}
+
+#link2.linkBox:hover .linkIcon {
+  filter: brightness(0);
 }
 
 .appContainer { /*Container for all app elements*/
@@ -174,7 +190,7 @@ body {
 }
 
 .footer { /*entire footer container*/
-  padding: 1rem var(--LRPadding) 1rem var(--LRPadding);
+  padding: 1rem var(--LRPadding) 0.8rem var(--LRPadding);
   right: 0;
   left: 0;
   position: fixed;
