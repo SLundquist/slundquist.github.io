@@ -4,13 +4,18 @@ $background: rgb(4, 4, 6); /*Off Black (Blue tint)*/
 $primary: rgb(57, 50, 195); /*Blue*/
 $secondary: rgb(47, 51, 60); /*Gray*/
 $accent: rgb(230, 167, 40); /*Yellow*/
-$accentBackground: rgba(232, 232, 248, 0.1);
+$accentBackground: rgba(232, 232, 248, 0.1); //10% opacity of $text
 /*Padding Variables*/
-$LRPadding: calc((100vw - 1000px) / 5);
+$LRPadding: calc((100vw - 1000px) / 6);
 /*Font Variables*/
 $lightFont: "Monaspace Neon Light", monospace; /*Secondary font*/
 $boldFont: "Monaspace Neon ExtraBold", monospace; /*Main font*/
 $specialFont: "Monaspace Krypton Light", monospace; /*Accent font*/
+
+@mixin titleStyle{
+  font-family: $boldFont;
+  font-size: 5rem;
+}
 
 * {
   /*General website style properties*/
@@ -25,6 +30,11 @@ $specialFont: "Monaspace Krypton Light", monospace; /*Accent font*/
 body {
   /*Creates a base background color for all elements*/
   background: $background;
+}
+
+::selection {
+  background: $primary;
+  border-radius: 1rem;
 }
 
 .navContainer {
@@ -77,10 +87,10 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   transition: transform 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
-}
 
-.logoBox:hover {
-  transform: scale(1.03);
+  :hover {
+    transform: scale(1.03);
+  }
 }
 
 .logoText {
@@ -115,45 +125,43 @@ body {
   align-items: center;
   height: 1.5rem;
   width: 1.5rem;
-}
 
-.linkBox:hover::after {
-  /*tooltip maker*/
-  display: block;
-  position: absolute;
-  top: 6rem;
-  align-items: center;
-  content: attr(data-tooltip);
-  border: none;
-  border-radius: 1rem;
-  background: $background; //should be 80% opacity
-  padding: 0.5rem;
+  :hover::after {
+    /*tooltip maker*/
+    display: block;
+    position: absolute;
+    top: 6rem;
+    align-items: center;
+    content: attr(data-tooltip);
+    border: none;
+    border-radius: 1rem;
+    background: $accentBackground;
+    padding: 0.5rem;
+  }
 }
 
 #link1 {
   transition: brightness 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01), background 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
-}
 
-#link1:hover {
-  background-image: url(./assets/icons/instagramLogoBackground.svg) no-repeat;
-  background-size: 100%;
-}
-
-#link1.linkBox:hover .linkIcon {
-  filter: brightness(100);
+  &:hover {
+    background: $text;
+    
+    .linkIcon {
+    filter: brightness(0);
+    }
+  }
 }
 
 #link2 {
   transition: brightness 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01), background 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
-}
 
-#link2:hover {
-  background: #ffffff;
-}
+  &:hover {
+    background: $text;
 
-#link2.linkBox:hover .linkIcon {
-  /*makes the unsplash logo turn black when hovering over the button*/
-  filter: brightness(0);
+    .linkIcon {
+      filter: brightness(0);
+    }
+  }
 }
 
 #link3 {
@@ -248,7 +256,7 @@ body {
 
 .portfolioElement {
   /*Container for each project element*/
-  background: $secondary;
+  background: $accentBackground;
   padding: 0rem;
   border-radius: 1rem;
   display: flex;
