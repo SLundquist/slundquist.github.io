@@ -9,6 +9,7 @@ import browserSync from 'browser-sync';
 
 const sassCompiler = gulpSass(sass);
 const browserSyncServer = browserSync.create();
+const splitter = '------------------------------------------------------------------------------------------------';
 
 // Define file paths
 const paths = {
@@ -16,15 +17,21 @@ const paths = {
   css: './css'                                                                  // CSS output location
 };
 
+// const separator = () => {
+//   log.console(splitter);
+// }
+
 // Compile SCSS to CSS
 const compileSCSS = () => {
+  console.log(splitter);                                                        // Insert separator variable
   return gulp.src(paths.scss)
     .pipe(sassCompiler().on('error', sassCompiler.logError))                    // Compile SCSS and handle errors
     .pipe(autoprefixer())                                                       // Add vendor prefixes
     .pipe(cleanCSS())                                                           // Minify CSS
     .pipe(gulp.dest(paths.css))                                                 // Output CSS
-    .pipe(browserSyncServer.stream());                                          // Stream changes to browser
-};
+    .pipe(browserSyncServer.stream())                                           // Stream changes to browser   
+    .on('end', () => console.log(splitter));
+  };
 
 // Watch SCSS files for changes
 const watchFiles = () => {
