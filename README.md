@@ -1,7 +1,7 @@
 # slundquist.github.io
 
-This is my personal portfolio as a web developer.
+This is my portfolio as a web developer.
 
-Copyright © 2024 Silas Lundquist
+MIT License Copyright © 2024 Silas Lundquist
 
-Website uses HTML and CSS. CSS is created using SCSS and the compiling process is automated by Gulp. 
+The website uses HTML and CSS. Gulp automates the compiling process of SCSS in to CSS. 
