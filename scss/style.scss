@@ -8,15 +8,16 @@ $accentBackground: rgba(232, 232, 248, 0.1); // 10% opacity of $text
 // Padding Variables
 $LRPadding: calc((100vw - 1000px) / 6);
 // Font Variables
-$lightFont: "Monaspace Neon Light", monospace; // Secondary font
-$boldFont: "Monaspace Neon ExtraBold", monospace; // Main font
-$specialFont: "Monaspace Krypton Light", monospace; // Accent font
-$scriptFont: "Monaspace Radon Bold Italic", monospace; // Second Accent font
+$lightFont: 'Monaspace Neon Light', monospace; // Secondary font
+$boldFont: 'Monaspace Neon ExtraBold', monospace; // Main font
+$specialFont: 'Monaspace Krypton Light', monospace; // Accent font
+$scriptFont: 'Monaspace Radon Bold Italic', monospace; // Second Accent font
 // Animation Variables
 $transitionCurve: cubic-bezier(0.14, 0.3, 0.6, 1.01);
 $transitionTime: 0.1s;
 
-* { // General website style properties
+* {
+  // General website style properties
   background: transparent;
   color: $text;
   font-family: $boldFont;
@@ -25,7 +26,8 @@ $transitionTime: 0.1s;
   padding: 0;
 }
 
-body { // Creates a base background color for all elements
+body {
+  // Creates a base background color for all elements
   background: $background;
 }
 
@@ -35,7 +37,8 @@ body { // Creates a base background color for all elements
   gap: 3rem;
 }
 
-.navContainer { // Contains the entire navigation bar
+.navContainer {
+  // Contains the entire navigation bar
   display: flex;
   flex-flow: row wrap;
   padding: 2rem $LRPadding 2rem $LRPadding;
@@ -46,20 +49,22 @@ body { // Creates a base background color for all elements
   border-bottom: 1px solid $secondary;
 }
 
-.navItems { // Container for website hyperlinks in the nav bar
+.navItems {
+  // Container for website hyperlinks in the nav bar
   order: 2;
   display: flex;
   flex-flow: row nowrap;
 }
 
-.internLink { // Internal hyperlink container
+.internLink {
+  // Internal hyperlink container
   margin-left: 30px;
   margin-right: 30px;
 }
 
-.internalLinkText { // text of the link buttons
+.internalLinkText {
+  // text of the link buttons
   font-weight: 100;
-  margin: 0;
   padding: 1rem 1.5rem 1rem 1.5rem;
   border-radius: 10px;
   transition: transform $transitionTime $transitionCurve;
@@ -71,7 +76,8 @@ body { // Creates a base background color for all elements
   }
 }
 
-.logoBox { // Entire Logo
+.logoBox {
+  // Entire Logo
   order: 1;
   display: flex;
   flex-flow: row nowrap;
@@ -83,12 +89,14 @@ body { // Creates a base background color for all elements
   }
 }
 
-.logoText { // Current logo
+.logoText {
+  // Current logo
   font-family: $boldFont;
   background: transparent;
 }
 
-.navLinks { // Container for all external links
+.navLinks {
+  // Container for all external links
   order: 3;
   display: flex;
   flex-flow: row nowrap;
@@ -96,13 +104,15 @@ body { // Creates a base background color for all elements
   gap: 0.5rem;
 }
 
-.linkIcon { // Class for external site icons
+.linkIcon {
+  // Class for external site icons
   height: 2rem;
   width: auto;
   background: transparent;
 }
 
-.linkBox { // Container for each link
+.linkBox {
+  // Container for each link
   padding: 1rem;
   background: transparent;
   border-radius: 1rem;
@@ -113,7 +123,8 @@ body { // Creates a base background color for all elements
   width: 1.5rem;
   transition: brightness $transitionTime transitionCurve, background $transitionTime $transitionCurve;
 
-  &:hover::after { // tooltip maker
+  &:hover::after {
+    // tooltip maker
     display: block;
     position: absolute;
     top: 6rem;
@@ -127,18 +138,16 @@ body { // Creates a base background color for all elements
 }
 
 #link1 {
-
   &:hover {
     background: $text;
-    
+
     .linkIcon {
-    filter: brightness(0);
+      filter: brightness(0);
     }
   }
 }
 
 #link2 {
-
   &:hover {
     background: $text;
 
@@ -149,7 +158,6 @@ body { // Creates a base background color for all elements
 }
 
 #link3 {
-
   &:hover {
     background: #0a66c2;
 
@@ -159,9 +167,9 @@ body { // Creates a base background color for all elements
   }
 }
 
-.appContainer { // Container for all app elements
+.appContainer {
+  // Container for all app elements
   padding: 0 $LRPadding 0 $LRPadding;
-  margin: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
@@ -192,13 +200,15 @@ body { // Creates a base background color for all elements
   -webkit-text-fill-color: transparent;
 }
 
-.aboutMeTag { // Descriptive tag under name
+.aboutMeTag {
+  // Descriptive tag under name
   font-family: $lightFont;
   font-size: 2.5rem;
   color: $text;
 }
 
-.textColorAccent1 { // For developer related things
+.textColorAccent1 {
+  // For developer related things
   color: $primary;
   background: $accentBackground;
   padding: 0.5rem 0.2rem 0.5rem 0.2rem;
@@ -206,7 +216,8 @@ body { // Creates a base background color for all elements
   border-radius: 0.4rem;
 }
 
-.textColorAccent2 { // For creative related things
+.textColorAccent2 {
+  // For creative related things
   color: $accent;
   background: $accentBackground;
   padding: 0.5rem 0.2rem 0.5rem 0.2rem;
@@ -216,26 +227,30 @@ body { // Creates a base background color for all elements
   -webkit-text-fill-color: transparent;
 }
 
-.aboutMeImage { // Picture of me
+.aboutMeImage {
+  // Picture of me
   width: auto;
   border-radius: 5rem;
 }
 
-.appTitle { // Titles for app sections
+.appTitle {
+  // Titles for app sections
   background: none;
   padding: 1rem 0 2.5rem 0;
   font-size: 2rem;
   color: $text;
 }
 
-.portfolioElements { // Container for all project elements
+.portfolioElements {
+  // Container for all project elements
   display: flex;
   flex-flow: row wrap;
   gap: 2rem;
   justify-content: start;
 }
 
-.portfolioElement { // Container for each project element
+.portfolioElement {
+  // Container for each project element
   background: $accentBackground;
   padding: 0rem;
   border-radius: 1rem;
@@ -245,7 +260,7 @@ body { // Creates a base background color for all elements
   align-items: center;
   height: 400px;
   width: 400px;
-  transition: transform 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
+  transition: transform $transitionTime $transitionCurve;
 
   &:hover {
     transform: scale(1.03);
@@ -256,14 +271,16 @@ body { // Creates a base background color for all elements
   }
 }
 
-.portfolioElementTitle { // title of all project names
+.portfolioElementTitle {
+  // title of all project names
   background: transparent;
   margin-bottom: 1.5rem;
   margin-top: 3rem;
   font-family: $lightFont;
 }
 
-.portfolioElementImage { // class to make all screenshot images look similar
+.portfolioElementImage {
+  // class to make all screenshot images look similar
   max-width: 100%;
   border-radius: 0;
   border-radius: 1rem;
@@ -283,7 +300,7 @@ body { // Creates a base background color for all elements
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.07);
-  transition: transform 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01), box-shadow 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
+  transition: transform $transitionTime $transitionCurve, box-shadow $transitionTime $transitionCurve;
 
   &:hover {
     transform: scale(1.03);
@@ -291,14 +308,16 @@ body { // Creates a base background color for all elements
   }
 }
 
-.footerInternalLinksContainer { // container for the links in the footer
+.footerInternalLinksContainer {
+  // container for the links in the footer
   display: flex;
   flex-flow: row nowrap;
   background: transparent;
   gap: 4rem;
 }
 
-.footer { // entire footer container
+.footer {
+  // entire footer container
   padding: 1rem $LRPadding 0.8rem $LRPadding;
   right: 0;
   left: 0;
@@ -313,7 +332,8 @@ body { // Creates a base background color for all elements
   border-top: 1px solid $secondary;
 }
 
-.footerExternalLinksContainer { // Container for all external links in the footer
+.footerExternalLinksContainer {
+  // Container for all external links in the footer
   background: transparent;
   display: flex;
   flex-flow: row nowrap;
@@ -322,16 +342,17 @@ body { // Creates a base background color for all elements
   gap: 0.2rem;
 }
 
-.footerLinkIcon { // Class for all icons of links in the footer
+.footerLinkIcon {
+  // Class for all icons of links in the footer
   height: 1.5rem;
   background: transparent;
-  transition: filter 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
+  transition: filter $transitionTime $transitionCurve;
 }
 
-.footerExternalLinkBox { // Box for each specific link icon
+.footerExternalLinkBox {
+  // Box for each specific link icon
   background: transparent;
   margin: 0rem;
-  padding: 0;
   border-radius: 10px;
   height: 3rem;
   width: 3rem;
@@ -339,7 +360,7 @@ body { // Creates a base background color for all elements
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  transition: background 0.1s cubic-bezier(0.14, 0.3, 0.6, 1.01);
+  transition: background $transitionTime $transitionCurve;
 
   &:hover {
     background: $text;
@@ -354,7 +375,8 @@ body { // Creates a base background color for all elements
   }
 }
 
-.footerCopyrightContainer { // Contains the copyright elements in the footer
+.footerCopyrightContainer {
+  // Contains the copyright elements in the footer
   background: transparent;
   display: flex;
   flex-flow: row nowrap;
@@ -362,12 +384,14 @@ body { // Creates a base background color for all elements
   align-items: center;
 }
 
-.footerCopyrightLogo { // SL logo for the copyright area
+.footerCopyrightLogo {
+  // SL logo for the copyright area
   height: 1.5rem;
   background: transparent;
 }
 
-.footerCopyrightText { // Copyright Text
+.footerCopyrightText {
+  // Copyright Text
   background: transparent;
   padding-left: 5px;
   font-weight: lighter;
