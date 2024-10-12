@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silas Lundquist</title>
+    <!-- Title -->
     <meta name="description" content="Artist, Photographer, Programer" />
+    <!-- Website description -->
     <link rel="icon" type="image/x-icon" href="./assets/icons/slSymbol.png" />
+    <!-- Website Logo -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Style sheet link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Preconnect to Google API for font pull -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect to Google for font pull -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+    <!-- Google Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- Google Font Import -->
   </head>
   <body>
     <div class="containerAll">
@@ -28,72 +40,34 @@
         </div>
       </nav>
       <div class="appContainer">
-        <div class="aboutMe">
-          <div class="aboutMeText">
-            <h2 class="aboutMeTitle">Silas Lundquist</h2>
-            <h3 class="aboutMeTag">
-              Web <strong class="textColorAccent1">Developer</strong>, Web <strong class="textColorAccent2">Designer</strong>
-            </h3>
-          </div>
-          <img class="aboutMeImage" src="./assets/icons/profilePicturePlaceholder.jpg" alt="" />
+        <div class="introduction">
+          <h2 class="introductionTitle">Hi, I'm <strong class="textColorAccent3">Silas Lundquist</strong></h2>
+          <h3 class="introductionTag">Web <strong class="textColorAccent1">Developer</strong>, Web <strong class="textColorAccent2">Designer</strong></h3>
         </div>
-        <div class="projects">
-          <h2 class="appTitle">Web Design <strong class="textColorAccent1">Projects</strong></h2>
-          <div class="portfolioElements">
-            <a class="portfolioElement" target="_blank" href="./public/movie-ranking.html">
-              <h3 class="portfolioElementTitle">Movie Ranking Project</h3>
-              <img class="portfolioElementImage" src="./assets/images/favoriteMovies.png" alt="website screenshot" />
-            </a>
-            <a class="portfolioElement" target="_blank" href="./public/birthday-invite.html">
-              <h3 class="portfolioElementTitle">Birthday Party Invite</h3>
-              <img class="portfolioElementImage" src="./assets/images/birthdayPartyInvite.png" alt="website screenshot" />
-            </a>
-            <!--Add more portfolio Elements here. Wrap an h3 and image (screenshot) in an "a" tag-->
-          </div>
-        </div>
-        <div class="photography">
-          <h2 class="appTitle">Photography</h2>
-          <div class="photographyContainer">
-            <a href="https://unsplash.com/photos/a-stained-glass-window-in-a-dark-room-fMGcWFRx8Cw">
-              <img class="photo" src="./assets/images/IMG_8457.jpg" alt="stained glass window in a church" />
-            </a>
-            <a href="https://unsplash.com/photos/a-close-up-of-a-stained-glass-window-vCJJZPQjiuQ">
-              <img class="photo" src="./assets/images/IMG_8459.jpg" alt="stained glass window in front of leaves" />
-            </a>
-            <a href="https://unsplash.com/photos/a-wall-covered-in-lots-of-green-and-red-plants-AO1OehQbPMQ">
-              <img class="photo" src="./assets/images/IMG_8488.jpg" alt="colorful vines on a white plastered wall" />
-            </a>
-            <a href="https://unsplash.com/photos/a-bunch-of-red-roses-in-a-black-and-white-photo-f6V0lX87Z-M">
-              <img class="photo" src="./assets/images/IMG_8501.jpg" alt="roses monochromatic color grading" />
-            </a>
-            <a href="https://unsplash.com/photos/JKpFFg6dkGs">
-              <img class="photo" src="./assets/images/IMG_8533.jpg" alt="corner of a brick wall" />
-            </a>
-            <!--Add more image elements here. Wrap an image in an "a" tag-->
-          </div>
-          <!--Add more app elements here (wrap in parent div)-->
+        <div class="separator">
+          <img class="arrow" src="./assets/icons/arrow.svg" />
         </div>
       </div>
       <footer class="footer">
-        <div class="footerExternalLinksContainer">
-          <a class="footerExternalLinkBox" target="_blank" href="https://www.instagram.com/silaslundquist/">
-            <img class="footerLinkIcon" src="./assets/icons/instagramLogo.svg" alt="instagram.com logo" />
+        <div class="footerLinksContainer">
+          <a class="footerLinkBox" target="_blank" href="https://www.instagram.com/silaslundquist/">
+            <img class="linkIcon" src="./assets/icons/instagramLogo.svg" alt="instagram.com logo" />
           </a>
-          <a class="footerExternalLinkBox" target="_blank" href="https://unsplash.com/@silaslundquist">
-            <img class="footerLinkIcon" src="./assets/icons/unsplashLogo.png" alt="unsplash.com logo" />
+          <a class="footerLinkBox" target="_blank" href="https://unsplash.com/@silaslundquist">
+            <img class="linkIcon" src="./assets/icons/unsplashLogo.png" alt="unsplash.com logo" />
           </a>
-          <a class="footerExternalLinkBox" target="_blank" href="https://www.linkedin.com/in/silas-lundquist-595246326/">
-            <img class="footerLinkIcon" src="./assets/icons/linkedinLogo.png" alt="linkedin.com logo" />
+          <a class="footerLinkBox" target="_blank" href="https://www.linkedin.com/in/silas-lundquist-595246326/">
+            <img class="linkIcon" src="./assets/icons/linkedinLogo.png" alt="linkedin.com logo" />
           </a>
-          <a class="footerExternalLinkBox" target="_blank" href="https://x.com/silaslundquist">
-            <img class="footerLinkIcon" src="./assets/icons/xLogo.png" alt="x.com logo" />
+          <a class="footerLinkBox" target="_blank" href="https://x.com/silaslundquist">
+            <img class="linkIcon" src="./assets/icons/xLogo.png" alt="x.com logo" />
           </a>
-          <a class="footerExternalLinkBox" target="_blank" href="https://www.youtube.com/@silaslundquist">
-            <img id="footerLink1" class="footerLinkIcon" src="./assets/icons/YTLogo.png" alt="youtube.com Logo" />
+          <a class="footerLinkBox" target="_blank" href="https://www.youtube.com/@silaslundquist">
+            <img id="footerLink1" class="linkIcon" src="./assets/icons/YTLogo.png" alt="youtube.com Logo" />
           </a>
         </div>
         <div class="footerCopyrightContainer">
-          <p class="footerCopyrightText">Copyright © 2024 Silas Lundquist</p>
+          <p class="footerCopyrightText">MIT Copyright © 2024 Silas Lundquist</p>
         </div>
       </footer>
     </div>

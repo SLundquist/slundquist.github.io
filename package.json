@@ -9,8 +9,7 @@
   "email": "silaslundquist@gmail.com",
   "license": "MIT", 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
 
   "repository": {

@@ -20,6 +20,7 @@ const paths = {
 // Compile SCSS to CSS
 const compileSCSS = () => {
   console.log(splitter); // Insert separator variable
+  silenceDeprecations: ['legacy-js-api'];
   return gulp
     .src(paths.scss)
     .pipe(sassCompiler().on('error', sassCompiler.logError)) // Compile SCSS and handle errors
