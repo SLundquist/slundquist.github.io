@@ -1,75 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silas Lundquist</title>
-    <!-- Title -->
     <meta name="description" content="Artist, Photographer, Programer" />
-    <!-- Website description -->
     <link rel="icon" type="image/x-icon" href="./assets/icons/slSymbol.png" />
-    <!-- Website Logo -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- Style sheet link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <!-- Preconnect to Google API for font pull -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Preconnect to Google for font pull -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
-    <!-- Google Font Import -->
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <!-- Google Font Import -->
   </head>
   <body>
-    <div class="containerAll">
-      <nav class="navContainer">
-        <a class="logoBox" href="./index.html">
-          <h1 class="logoText">slundquist.github.io</h1>
+    <nav class="nav">
+      <a class="logo" href="./index.html">
+        <h1 class="logoText">slundquist.github.io</h1>
+      </a>
+      <div class="navLinks">
+        <a id="link1" data-tooltip="Instagram" class="linkBox" target="_blank" href="https://www.instagram.com/silaslundquist/">
+          <img class="linkIcon" src="./assets/icons/instagramLogo.svg" alt="instagram.com logo" />
         </a>
-        <div class="navLinks">
-          <a id="link1" data-tooltip="Instagram" class="linkBox" target="_blank" href="https://www.instagram.com/silaslundquist/">
-            <img class="linkIcon" src="./assets/icons/instagramLogo.svg" alt="instagram.com logo" />
-          </a>
-          <a id="link2" data-tooltip="Unsplash" class="linkBox" target="_blank" href="https://unsplash.com/@silaslundquist">
-            <img class="linkIcon" src="./assets/icons/unsplashLogo.png" alt="unsplash.com logo" />
-          </a>
-          <a id="link3" data-tooltip="LinkedIn" class="linkBox" target="_blank" href="https://www.linkedin.com/in/silas-lundquist-595246326/">
-            <img class="linkIcon" src="./assets/icons/linkedinLogo.png" alt="linkedin.com logo" />
-          </a>
-          <!--Add more external links here. Wrap an icon (svg img) an "a" tag-->
-        </div>
-      </nav>
-      <div class="appContainer">
-        <div class="introduction">
-          <h2 class="introductionTitle">Hi, I'm <strong class="textColorAccent3">Silas Lundquist</strong></h2>
-          <h3 class="introductionTag">Web <strong class="textColorAccent1">Developer</strong>, Web <strong class="textColorAccent2">Designer</strong></h3>
-        </div>
-        <div class="separator">
-          <img class="arrow" src="./assets/icons/arrow.svg" />
-        </div>
+        <a id="link2" data-tooltip="Unsplash" class="linkBox" target="_blank" href="https://unsplash.com/@silaslundquist">
+          <img class="linkIcon" src="./assets/icons/unsplashLogo.png" alt="unsplash.com logo" />
+        </a>
+        <a id="link3" data-tooltip="LinkedIn" class="linkBox" target="_blank" href="https://www.linkedin.com/in/silas-lundquist-595246326/">
+          <img class="linkIcon" src="./assets/icons/linkedinLogo.png" alt="linkedin.com logo" />
+        </a>
+        <!--Add more external links here. Wrap an icon (svg img) an "a" tag-->
       </div>
-      <footer class="footer">
-        <div class="footerLinksContainer">
-          <a class="footerLinkBox" target="_blank" href="https://www.instagram.com/silaslundquist/">
-            <img class="linkIcon" src="./assets/icons/instagramLogo.svg" alt="instagram.com logo" />
-          </a>
-          <a class="footerLinkBox" target="_blank" href="https://unsplash.com/@silaslundquist">
-            <img class="linkIcon" src="./assets/icons/unsplashLogo.png" alt="unsplash.com logo" />
-          </a>
-          <a class="footerLinkBox" target="_blank" href="https://www.linkedin.com/in/silas-lundquist-595246326/">
-            <img class="linkIcon" src="./assets/icons/linkedinLogo.png" alt="linkedin.com logo" />
-          </a>
-          <a class="footerLinkBox" target="_blank" href="https://x.com/silaslundquist">
-            <img class="linkIcon" src="./assets/icons/xLogo.png" alt="x.com logo" />
-          </a>
-          <a class="footerLinkBox" target="_blank" href="https://www.youtube.com/@silaslundquist">
-            <img id="footerLink1" class="linkIcon" src="./assets/icons/YTLogo.png" alt="youtube.com Logo" />
-          </a>
-        </div>
-        <div class="footerCopyrightContainer">
-          <p class="footerCopyrightText">MIT Copyright © 2024 Silas Lundquist</p>
-        </div>
-      </footer>
+    </nav>
+    <div class="appContainer">
+      <div class="introduction">
+        <h2 class="introductionTitle">Hi, I'm <strong class="textColorAccent3">Silas Lundquist</strong></h2>
+        <h3 class="introductionTag">Web <strong class="textColorAccent1">Developer</strong>, Web <strong class="textColorAccent2">Designer</strong></h3>
+      </div>
+      <div class="separator">
+        <img class="arrow" src="./assets/icons/arrow.svg" />
+      </div>
     </div>
+    <footer class="footer">
+      <div class="footerLinksContainer">
+        <a class="footerLinkBox" target="_blank" href="https://www.instagram.com/silaslundquist/">
+          <img class="linkIcon" src="./assets/icons/instagramLogo.svg" alt="instagram.com logo" />
+        </a>
+        <a class="footerLinkBox" target="_blank" href="https://unsplash.com/@silaslundquist">
+          <img class="linkIcon" src="./assets/icons/unsplashLogo.png" alt="unsplash.com logo" />
+        </a>
+        <a class="footerLinkBox" target="_blank" href="https://www.linkedin.com/in/silas-lundquist-595246326/">
+          <img class="linkIcon" src="./assets/icons/linkedinLogo.png" alt="linkedin.com logo" />
+        </a>
+        <a class="footerLinkBox" target="_blank" href="https://x.com/silaslundquist">
+          <img class="linkIcon" src="./assets/icons/xLogo.png" alt="x.com logo" />
+        </a>
+        <a class="footerLinkBox" target="_blank" href="https://www.youtube.com/@silaslundquist">
+          <img id="footerLink1" class="linkIcon" src="./assets/icons/YTLogo.png" alt="youtube.com Logo" />
+        </a>
+      </div>
+      <div class="footerCopyrightContainer">
+        <p class="footerCopyrightText">MIT Copyright © 2024 Silas Lundquist</p>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    </script>
   </body>
 </html>

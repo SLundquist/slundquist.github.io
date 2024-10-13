@@ -1,0 +1,23 @@
+const arrow = document.getElementsByClassName('arrow')[0];
+const nav = document.getElementsByClassName('nav')[0];
+
+// Scroll function when user clicks an arrow
+arrow.addEventListener('click', function () {
+  window.scrollTo({
+    top: 100,
+    behavior: 'smooth',
+  });
+});
+
+// nav bar changer when user scrolls
+window.addEventListener('scroll', function () {
+  var scrollPositionY = window.scrollY || document.documentElement.scrollTop;
+  // console.log(scrollPositionY); for debug
+  if (scrollPositionY == 0) {
+    nav.classList.add('navAnimation');
+  }
+
+  if (scrollPositionY != 0) {
+    nav.classList.remove('navAnimation');
+  }
+});

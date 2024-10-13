@@ -87,20 +87,11 @@ html {
 body {
   font-size: 100%;
   background: $background;
-}
-
-.containerAll {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0rem;
 }
 
-.space {
-  // for testing purposes
-  height: 100rem;
-}
-
-.navContainer {
+.nav {
   // Contains the entire navigation bar
   z-index: 1;
   position: sticky;
@@ -111,13 +102,18 @@ body {
   justify-content: space-between;
   align-items: center;
   top: 3rem;
-  background: $accentBackground;
+  background: transparent;
   border-radius: 4rem;
   backdrop-filter: blur(0.8rem);
+  transition: all $transitionTime $transitionCurve;
+
+  &.navAnimation {
+    background: $accentBackground;
+  }
 }
 
-.logoBox {
-  // Entire Logo
+.logo {
+  // Logo
   order: 1;
   display: flex;
   flex-flow: row nowrap;
@@ -126,7 +122,7 @@ body {
 }
 
 .logoText {
-  // Current logo
+  // Logo but the actual text
   @include boldStyle();
   font-size: 2.4rem;
 
@@ -168,10 +164,10 @@ body {
     top: 7rem;
     align-items: center;
     content: attr(data-tooltip);
-    border: none;
-    border-radius: 1rem;
-    background: $accentBackground;
-    padding: 0.5rem;
+    border: 1px solid $accentBackground;
+    border-radius: 10rem;
+    background: $background;
+    padding: 0.8rem;
     backdrop-filter: blur(1rem);
   }
 }
@@ -208,7 +204,6 @@ body {
 
 .appContainer {
   // Container for all app elements
-  padding: 0 $LRPadding 0 $LRPadding;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
@@ -267,7 +262,15 @@ body {
 }
 
 .arrow {
-  height: 2.5rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  transition: all $transitionTime $transitionCurve;
+
+  &:hover {
+    background: $accentBackground;
+  }
 }
 
 .footer {
