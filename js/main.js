@@ -4,7 +4,7 @@ const nav = document.getElementsByClassName('nav')[0];
 // Scroll function when user clicks an arrow
 arrow.addEventListener('click', function () {
   window.scrollTo({
-    top: 100,
+    top: 800,
     behavior: 'smooth',
   });
 });
@@ -12,12 +12,12 @@ arrow.addEventListener('click', function () {
 // nav bar changer when user scrolls
 window.addEventListener('scroll', function () {
   var scrollPositionY = window.scrollY || document.documentElement.scrollTop;
-  // console.log(scrollPositionY); for debug
+  console.log(scrollPositionY);
   if (scrollPositionY == 0) {
-    nav.classList.add('navAnimation');
+    nav.classList.remove('navAnimation');
   }
 
   if (scrollPositionY != 0) {
-    nav.classList.remove('navAnimation');
+    nav.classList.add('navAnimation');
   }
 });
