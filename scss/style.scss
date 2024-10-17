@@ -168,8 +168,7 @@ body {
     border: 0.8px solid $secondary;
     border-radius: 10rem;
     background: $background;
-    padding: 0.8rem;
-    backdrop-filter: blur(1rem);
+    padding: 0.8rem 1.2rem;
   }
 }
 
@@ -255,22 +254,30 @@ body {
 
 .separator {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
-.arrow {
-  height: 5rem;
-  width: 5rem;
-  padding: 3rem 3rem 3rem 3rem;
-  border-radius: 50%;
+.arrowContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  width: 9rem;
+  border-radius: 20rem;
+  overflow: hidden;
 
   &:hover {
     background: $accentBackground;
   }
+}
+
+.arrow {
+  padding-top: 0.3rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 .webContent {
@@ -286,10 +293,15 @@ body {
 
 .projectElements {
   display: grid;
-  grid-auto-rows: minmax(0px, 1fr);
   gap: 2rem;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
-  grid-template-rows: repeat(2, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, minmax(auto, 80rem));
+  grid-template-rows: repeat(2, 40rem);
+}
+
+.screenshot {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
 }
 
 .box {
@@ -297,9 +309,11 @@ body {
   border-radius: 1rem;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.02);
+    box-shadow: 0rem 0rem 0rem 0.6rem $text, 0rem 0rem 0.8rem 0.6rem $text;
   }
 }
 
@@ -346,13 +360,18 @@ body {
   height: 40rem;
   object-fit: cover;
   overflow: hidden;
-  filter: saturate(0) brightness(0.4);
+  filter: saturate(0) brightness(0.5);
 
   &:hover {
     z-index: 3;
     transform: scale(1.1);
     filter: saturate(1);
-    box-shadow: 0rem 0rem 0rem 0.6rem $text, 0rem 0rem 2rem 0.6rem$text;
+    box-shadow: 0rem 0rem 0rem 0.6rem $text, 0rem 0rem 0.8rem 0.6rem$text;
+  }
+
+  &:hover .externalLinkIcon {
+    opacity: 1;
+    background: radial-gradient(circle at 100% top, rgba(0, 0, 0, 0.795) 0%, rgba(0, 0, 0, 0) 70%);
   }
 }
 
@@ -360,6 +379,18 @@ body {
   width: 100%;
   height: 40rem;
   object-fit: cover;
+}
+
+.externalLinkIcon {
+  position: absolute;
+  z-index: 2;
+  right: 0rem;
+  top: 0rem;
+  padding: 2rem 2rem 8rem 8rem;
+  height: 3rem;
+  width: auto;
+  opacity: 0;
+  border-radius: 0 0 0 4rem;
 }
 
 #photo1 {
@@ -391,20 +422,14 @@ body {
   gap: 0.5rem;
 }
 
-.footerLinkIcon {
-  // Class for all icons of links in the footer
-  height: 1.5rem;
-  background: transparent;
-}
-
 .footerLinkBox {
   // Box for each specific link icon
   background: transparent;
-  padding: 0.5rem;
+  padding: 1.5rem;
   margin: 0rem;
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 1.5rem;
+  width: 1.5rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -413,12 +438,13 @@ body {
   &:hover {
     background: $text;
 
-    .footerLinkIcon {
+    .linkIcon {
       filter: brightness(0);
     }
 
-    #footerLink1 {
-      filter: brightness();
+    #footerLink1,
+    #footerLink2 {
+      filter: brightness(1);
     }
   }
 }
