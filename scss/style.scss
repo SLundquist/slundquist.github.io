@@ -7,7 +7,7 @@ $accent: #e6a728; // Yellow
 $accentBackground: #8e8f941a; // 10% opacity gray color
 
 // Padding Variables
-$LRPadding: calc((100vw - 1000px) / 3);
+$LRPadding: 15vw; // OLD: calc((100vw - 1000px) / 3)
 
 // Font Variables
 @mixin titleStyle {
@@ -66,8 +66,8 @@ $LRPadding: calc((100vw - 1000px) / 3);
 }
 
 // Animation Variables
-$transitionCurve: cubic-bezier(0.14, 0.3, 0.6, 1.01);
-$transitionTime: 0.13s;
+$transitionCurve: cubic-bezier(0.44, 1.01, 0.42, 0.98);
+$transitionTime: 0.2s;
 
 * {
   // General website style properties
@@ -111,7 +111,7 @@ body {
 }
 
 .space {
-  height: 100vh;
+  height: 5rem;
 }
 
 .logo {
@@ -165,7 +165,7 @@ body {
     top: 7rem;
     align-items: center;
     content: attr(data-tooltip);
-    border: 1px solid $accentBackground;
+    border: 0.8px solid $secondary;
     border-radius: 10rem;
     background: $background;
     padding: 0.8rem;
@@ -258,13 +258,14 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  height: 10rem;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .arrow {
   height: 5rem;
   width: 5rem;
-  padding: 1.5rem;
+  padding: 3rem 3rem 3rem 3rem;
   border-radius: 50%;
 
   &:hover {
@@ -296,31 +297,73 @@ body {
   border-radius: 1rem;
   width: 100%;
   height: 100%;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.photography {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .photographyElements {
   display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: repeat(3, minmax(400px, 1fr));
+  grid-template-columns: repeat(4, minmax(auto, 40rem));
+  grid-template-rows: repeat(2, 40rem);
   gap: 2rem;
 }
 
-.pbox {
-  background: $secondary;
-  border-radius: 1rem;
-  width: 100%;
-  height: max(400px);
-  object-fit: cover;
-  overflow: hidden;
+@media only screen and (max-width: 1280px) {
+  .photographyElements {
+    grid-template-columns: repeat(2, minmax(auto, 40rem));
+    grid-template-rows: repeat(4, 40rem);
+  }
 
-  &:hover {
-    transform: scale(1.03);
+  .projectElements {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .photographyElements {
+    grid-template-columns: repeat(1, minmax(auto, 40rem));
+    grid-template-rows: repeat(8, 40rem);
+  }
+
+  .projectElements {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
 
 .photo {
+  z-index: 1;
+  background: $secondary;
+  border-radius: 1rem;
   width: 100%;
+  height: 40rem;
   object-fit: cover;
+  overflow: hidden;
+  filter: saturate(0) brightness(0.4);
+
+  &:hover {
+    z-index: 3;
+    transform: scale(1.1);
+    filter: saturate(1);
+    box-shadow: 0rem 0rem 0rem 0.6rem $text, 0rem 0rem 2rem 0.6rem$text;
+  }
+}
+
+.source {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+#photo1 {
+  background-image: url('https://source.unsplash.com/y7Ldk3zjdTU');
 }
 
 .footer {
