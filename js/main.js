@@ -7,12 +7,13 @@ arrow.addEventListener('click', function () {
     top: 800,
     behavior: 'smooth',
   });
+  console.log('scroll success');
 });
 
 // nav bar changer when user scrolls
 window.addEventListener('scroll', function () {
   var scrollPositionY = window.scrollY || document.documentElement.scrollTop;
-  console.log(scrollPositionY);
+  // console.log(scrollPositionY); for debug
   if (scrollPositionY == 0) {
     nav.classList.remove('navAnimation');
   }
