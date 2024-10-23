@@ -6,6 +6,9 @@ $secondary: #2f333c; // Gray
 $accent: #e6a728; // Yellow
 $accentBackground: #8e8f941a; // 10% opacity gray color
 
+// Special Color Variables
+$linkedin: #0a66c2;
+
 // Padding Variables
 $LRPadding: 15vw; // OLD: calc((100vw - 1000px) / 3)
 
@@ -237,7 +240,7 @@ body {
 
 #link3 {
   &:hover {
-    background: #0a66c2; // LinkedIn Color
+    background: $linkedin;
 
     .linkIcon {
       filter: brightness(100);
@@ -361,7 +364,6 @@ body {
 }
 
 .photo {
-  z-index: 1;
   background: $secondary;
   border-radius: 1rem;
   width: 100%;
@@ -371,10 +373,10 @@ body {
   filter: saturate(0) brightness(0.7);
 
   &:hover {
-    z-index: 3;
+    z-index: 1;
     transform: scale(1.1);
     filter: saturate(1);
-    box-shadow: 0rem 0rem 0rem 0.6rem $text, 0rem 0rem 0.8rem 0.6rem$text;
+    box-shadow: 0rem 0rem 0rem 0.6rem $text, 0rem 0rem 1rem 0.6rem $text;
   }
 
   &:hover .externalLinkIcon {
