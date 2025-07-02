@@ -1,6 +1,6 @@
 # slundquist.github.io
 
-This is my portfolio as a web developer.
+This is my personal portfolio.
 
 MIT License Copyright © 2024 Silas Lundquist
 
