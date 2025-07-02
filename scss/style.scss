@@ -327,13 +327,13 @@ body {
 .projectElements {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, minmax(auto, 80rem));
-  grid-template-rows: repeat(2, 40rem);
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-auto-rows: 30rem;
 }
 
 .screenshot {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
 }
 
@@ -350,6 +350,13 @@ body {
   }
 }
 
+.box embed {
+  width: 100%;
+  height: 30rem;
+  border: none;
+  display: block;
+}
+
 .photography {
   display: flex;
   flex-flow: column nowrap;
@@ -358,8 +365,8 @@ body {
 
 .photographyElements {
   display: grid;
-  grid-template-columns: repeat(4, minmax(auto, 40rem));
-  grid-template-rows: repeat(2, 40rem);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-auto-rows: 40rem;
   gap: 2rem;
 }
 
